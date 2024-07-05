@@ -1,0 +1,11 @@
+<div class="container d-flex justify-content-between">
+  <div class="todo-list m-3">
+    <app-todo-list
+      [content]="todos$ | async"
+      (deleteIndex)="onTodoDelete($event)"
+    ></app-todo-list>
+  </div>
+  <div class="todo-form m-3">
+    <app-todo-form (newTodo)="onFromSubmit($event)"></app-todo-form>
+  </div>
+</div>

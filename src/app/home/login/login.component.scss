@@ -1,0 +1,29 @@
+.login {
+  &__img {
+    height: 50vh;
+  }
+  &__button {
+    display: flex;
+    gap: 30px;
+    .btn-primary,
+    .btn-danger {
+      width: 70%;
+    }
+  }
+}
+.error {
+  color: red;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  margin: 60px auto;
+}
+.login-with__google-img-btn {
+  gap: 10px;
+  border: 1px solid;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: underline;
+}

@@ -1,0 +1,83 @@
+<div class="card mb-3" style="max-width: 540px">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img
+        class="img-fluid rounded-start login__img"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQodyNLxyQ6kxIzsybz2v5_O8QDFp9-Ez9J6gQEqJlLzX2rGJ_ktHTFDHxLAQ&s"
+        alt="login-img"
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Login here</h5>
+        <hr />
+        <form action="" [formGroup]="loginForm">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Email</span>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="abc123@gmail.com"
+              aria-label="Email"
+              aria-describedby="basic-addon1"
+              formControlName="email"
+            />
+          </div>
+          @if(loginForm.controls.email.invalid&&
+          (loginForm.controls.email.dirty||loginForm.controls.email.touched)){
+          <p class="error">please enter properly...</p>
+          }
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Password</span>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              aria-label="Password"
+              aria-describedby="basic-addon1"
+              formControlName="password"
+            />
+          </div>
+          @if(loginForm.controls.password.invalid&&
+          (loginForm.controls.password.dirty||
+          loginForm.controls.password.touched)){
+          <p class="error">
+            Password invalid. please enter min 6 letters......
+          </p>
+          }
+        </form>
+        <div class="login__button">
+          <button
+            type="button"
+            class="btn btn-primary"
+            [disabled]="loginForm.invalid"
+            (click)="onClickedLoginBtn()"
+          >
+            Login
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="onClickedCancelBtn()"
+          >
+            Cancel
+          </button>
+        </div>
+
+        <div class="login-with__google mt-2">
+          <p class="d-flex justify-content-center">or</p>
+          <a
+            class="d-flex justify-content-center login-with__google-img-btn"
+            (click)="onClickedLoginGoogle()"
+            ><img
+              src="https://developers.google.com/static/identity/images/g-logo.png"
+              alt="google"
+              height="20px"
+            />Login with google</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

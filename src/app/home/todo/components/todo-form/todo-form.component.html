@@ -1,0 +1,39 @@
+<div class="container">
+  <form class="todo-form" [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Todo Name</span>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Todo Name"
+        aria-label="Todo Name"
+        aria-describedby="basic-addon1"
+        formControlName="name"
+      />
+    </div>
+    @if(todoForm.controls['name'].invalid&&
+    (todoForm.controls['name'].dirty||todoForm.controls['name'].touched)){
+    <small class="text-danger">Enter a todo to continue...</small>
+    }
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Description</span>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Description"
+        aria-label="Description"
+        aria-describedby="basic-addon1"
+        formControlName="description"
+      />
+    </div>
+    @if(todoForm.controls['description'].invalid&&
+    (todoForm.controls['description'].dirty||todoForm.controls['description'].touched)){
+    <small class="text-danger">Enter a Description to submit...</small>
+    }
+
+    <div class="submit-btn">
+      <button class="btn btn-success" type="submit">Submit</button>
+    </div>
+  </form>
+</div>

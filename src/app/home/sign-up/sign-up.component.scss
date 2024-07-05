@@ -1,0 +1,21 @@
+.sign-up {
+  &__img {
+    height: 50vh;
+  }
+  &__button {
+    display: flex;
+    gap: 30px;
+    .btn-primary,
+    .btn-danger {
+      width: 70%;
+    }
+  }
+  &__already-reg {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+.error {
+  color: red;
+}

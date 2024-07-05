@@ -1,0 +1,29 @@
+@if (content()) {
+<div class="card p-2">
+  <h1 class="text-center">Todo List</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (todo of content(); track $index) {
+      <tr>
+        <th scope="row">{{ $index + 1 }}</th>
+        <td>{{ todo.name }}</td>
+        <td>{{ todo.description }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="onDelete($index)">
+            Delete
+          </button>
+        </td>
+      </tr>
+      }@empty { please enter something to do... }
+    </tbody>
+  </table>
+</div>
+}
