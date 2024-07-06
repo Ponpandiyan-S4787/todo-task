@@ -25,7 +25,7 @@
           </div>
           @if( signupForm.controls.fName.invalid&&
           (signupForm.controls.fName.dirty||signupForm.controls.fName.touched)){
-          <p class="error">First name invalid, please enter properly...</p>
+          <p class="text-danger">invalid your first name</p>
           }
           <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">Last Name</span>
@@ -40,7 +40,7 @@
           </div>
           @if(signupForm.controls.lName.invalid&&
           (signupForm.controls.lName.dirty||signupForm.controls.lName.touched)){
-          <p class="error">Email is wrong,Enter properly...</p>
+          <p class="text-danger">invalid your last name</p>
           }
           <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">Email</span>
@@ -55,7 +55,7 @@
           </div>
           @if(signupForm.controls.email.invalid&&
           (signupForm.controls.email.dirty||signupForm.controls.email.touched)){
-          <p class="error">please enter properly...</p>
+          <p class="text-danger">invalid your email</p>
           }
 
           <div class="input-group mb-3">
@@ -72,9 +72,7 @@
           @if(signupForm.controls.password.invalid&&
           (signupForm.controls.password.dirty||
           signupForm.controls.password.touched)){
-          <p class="error">
-            Password invalid. please enter min 6 letters......
-          </p>
+          <p class="text-danger">incorrect your password</p>
           }
         </form>
         <div class="sign-up__button">

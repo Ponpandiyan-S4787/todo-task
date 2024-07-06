@@ -1,7 +1,16 @@
-.card {
-  width: 50vw;
+// .card {
+//   width: 50vw;
 
+//   @media (max-width: 767px) {
+//     width: 88vw;
+//   }
+// }
+thead {
   @media (max-width: 767px) {
-    width: 70vw;
+    display: flex;
   }
+}
+.empty-text-info {
+  text-align: center;
+  text-decoration: underline;
 }
